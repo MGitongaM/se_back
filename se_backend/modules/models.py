@@ -77,7 +77,7 @@ class Question(models.Model):
     question_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     module = models.ForeignKey(Module,on_delete=models.SET_NULL,null=True)
     question_number=models.IntegerField()
-    content = models.ForeignKey(Content,on_delete=models.SET_NULL,null=True)
+    subtopic = models.ForeignKey(SubTopics,on_delete=models.SET_NULL,null=True)
     question = models.JSONField(max_length=200,null=True, blank=True)
     question_type = models.IntegerField() #one will indicate open-ended, 2 will indicate multiple choice
     question_status=models.CharField(max_length=200,default="Created",editable=False)
