@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'se_backend.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'se-db',
+        'NAME': 'se',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
@@ -103,8 +103,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'theseplatform2020@gmail.com'
 EMAIL_HOST_PASSWORD = 'impactafrica2020'
-# EMAIL_HOST_USER = 'gitoshmbae@gmail.com'
-# EMAIL_HOST_PASSWORD = 'mike5966'
+
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_TLS = True
 
@@ -133,10 +132,12 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:8000",
+    'http://3.16.215.210:8000',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000/",
+    'http://3.16.215.210:8000'
 ]
 
 
